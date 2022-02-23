@@ -2,8 +2,12 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+[assembly: ExportFont("DMSerifDisplay-Regular.ttf", Alias = "DMSerifDisplay")]
+[assembly: ExportFont("Rubik-VariableFont.ttf", Alias = "Rubik")]
+
 namespace FoonkieMonkey
 {
+
     public partial class App : Application
     {
         public App()

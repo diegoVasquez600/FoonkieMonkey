@@ -3,6 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FoonkieMonkey.App">
     <Application.Resources>
-
+        <ResourceDictionary>
+            <Color x:Key="ColorFistFrame">#B3DDD8</Color>
+            <Color x:Key="ColorSecondFrame">#AAAACC</Color>
+            <Color x:Key="ColorLastFrame">#29ABE1</Color>
+            <Color x:Key="PrimaryButtonColor">#F5F5FA</Color>
+            <Color x:Key="CardColor">#E6E3EF</Color>
+            <Color x:Key="IndutriesTextColor">#130F2650</Color>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
