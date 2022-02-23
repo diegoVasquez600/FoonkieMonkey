@@ -36,7 +36,7 @@
                                     </Frame>
                                 </StackLayout>
                                 <Button ImageSource="strokeLeft.png" BackgroundColor="{DynamicResource PrimaryButtonColor}" HeightRequest="24" WidthRequest="24" CornerRadius="32" AbsoluteLayout.LayoutBounds="15,350"/>
-                                <Button ImageSource="strokeRight.png" BackgroundColor="{DynamicResource PrimaryButtonColor}" HeightRequest="24" WidthRequest="24" CornerRadius="32" AbsoluteLayout.LayoutBounds="355,350"/>
+                                <Button ImageSource="strokeRight.png" BackgroundColor="{DynamicResource PrimaryButtonColor}" HeightRequest="24" WidthRequest="24" CornerRadius="32" AbsoluteLayout.LayoutBounds="345,350"/>
                             </AbsoluteLayout>
                             <BoxView HeightRequest="0.2" BackgroundColor="#16313B" Margin="30,0,300,0"/>
                             <Grid RowSpacing="0" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand" ColumnSpacing="0">
