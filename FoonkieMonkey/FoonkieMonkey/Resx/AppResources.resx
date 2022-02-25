@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="BogotaText" xml:space="preserve">
+    <value>Bogotá:</value>
+  </data>
   <data name="BscText" xml:space="preserve">
     <value>Boston Scientific Group</value>
   </data>
@@ -132,6 +135,12 @@
   <data name="CardTitle" xml:space="preserve">
     <value>Digital Platform for Pfizer</value>
   </data>
+  <data name="HarpendenText" xml:space="preserve">
+    <value>Harpenden, UK:</value>
+  </data>
+  <data name="LastFrameTitle" xml:space="preserve">
+    <value>Let’s work together!</value>
+  </data>
   <data name="MainFrameButton" xml:space="preserve">
     <value>Get in Touch!</value>
   </data>
@@ -140,6 +149,9 @@
   </data>
   <data name="MainFrameTitle" xml:space="preserve">
     <value>Expert Samurais on Develop Secure apps with Sensitive data.</value>
+  </data>
+  <data name="MiamiText" xml:space="preserve">
+    <value>Miami, USA:</value>
   </data>
   <data name="MiddleFrameTitle" xml:space="preserve">
     <value>Case studies</value>

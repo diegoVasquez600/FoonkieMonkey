@@ -61,6 +61,15 @@ namespace FoonkieMonkey.Resx {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Bogotá:.
+        /// </summary>
+        internal static string BogotaText {
+            get {
+                return ResourceManager.GetString("BogotaText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Boston Scientific Group.
         /// </summary>
         internal static string BscText {
@@ -106,6 +115,24 @@ namespace FoonkieMonkey.Resx {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Harpenden, UK:.
+        /// </summary>
+        internal static string HarpendenText {
+            get {
+                return ResourceManager.GetString("HarpendenText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Let’s work together!.
+        /// </summary>
+        internal static string LastFrameTitle {
+            get {
+                return ResourceManager.GetString("LastFrameTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Get in Touch!.
         /// </summary>
         internal static string MainFrameButton {
@@ -129,6 +156,15 @@ namespace FoonkieMonkey.Resx {
         internal static string MainFrameTitle {
             get {
                 return ResourceManager.GetString("MainFrameTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Miami, USA:.
+        /// </summary>
+        internal static string MiamiText {
+            get {
+                return ResourceManager.GetString("MiamiText", resourceCulture);
             }
         }
         

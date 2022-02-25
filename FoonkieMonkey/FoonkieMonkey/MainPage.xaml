@@ -12,6 +12,8 @@
             <AbsoluteLayout>
                 <ScrollView Grid.Row="0" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1">
                     <StackLayout Spacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                        
+                        <!--#region Main Container -->
                         <StackLayout Margin="0" BackgroundColor="{DynamicResource ColorFistFrame}" HeightRequest="695">
                             <Image Source="logo.png" WidthRequest="100" Margin="0,50,0,22"/>
                             <BoxView HeightRequest="0.2" BackgroundColor="Black" Margin="160,0,160,8"/>
@@ -19,46 +21,85 @@
                             <Label Text="{helpers:Translate MainFrameDescription}" Margin="55,0,55,20" FontSize="12" TextColor="Black" HorizontalTextAlignment="Center" FontFamily="Rubik"/>
                             <Button Text="{helpers:Translate MainFrameButton}" CornerRadius="27" BackgroundColor="{DynamicResource PrimaryButtonColor}" FontFamily="DMSerifDisplay" TextTransform="None" HeightRequest="35" TextColor="{DynamicResource ColorLastFrame}" Margin="120,0,120,10"/>
                         </StackLayout>
-                        <StackLayout Margin="0" BackgroundColor="{DynamicResource ColorSecondFrame}" HeightRequest="830">
-                            <AbsoluteLayout>
-                                <StackLayout Margin="0" Spacing="0" Padding="0">
-                                    <Label Text="{helpers:Translate MiddleFrameTitle}" FontFamily="DMSerifDisplay" TextColor="White" FontSize="18" Margin="53,115,110,5"/>
-                                    <BoxView HeightRequest="0.2" BackgroundColor="White" Margin="53,0,270,25"/>
-                                    <Frame Padding="0" CornerRadius="17" BackgroundColor="{DynamicResource CardColor}" HeightRequest="520" Margin="50,0,50,30">
-                                        <StackLayout Margin="0" Padding="0">
-                                            <Frame CornerRadius="17">
-                                                <Image Source="pfizerMotion.png" HorizontalOptions="FillAndExpand" Margin="0" Aspect="AspectFill"/>
-                                            </Frame>
-                                            <Label Text="{helpers:Translate CardTitle}" Margin="30,0,15,5" FontFamily="DMSerifDisplay" FontSize="30" TextColor="Black"/>
-                                            <Label Text="{helpers:Translate CardDescription}" Margin="30,0,17,5" FontSize="10" FontFamily="Rubik"/>
-                                            <Button Text="{helpers:Translate CardButtonText}" Margin="30,0,139,20" HeightRequest="35" TextTransform="None" FontFamily="DMSerifDisplay" FontSize="12" CornerRadius="22" BackgroundColor="{DynamicResource PrimaryButtonColor}" TextColor="{DynamicResource ColorLastFrame}"/>
-                                        </StackLayout>
-                                    </Frame>
-                                </StackLayout>
-                                <Button ImageSource="strokeLeft.png" BackgroundColor="{DynamicResource PrimaryButtonColor}" HeightRequest="24" WidthRequest="24" CornerRadius="32" AbsoluteLayout.LayoutBounds="15,350"/>
-                                <Button ImageSource="strokeRight.png" BackgroundColor="{DynamicResource PrimaryButtonColor}" HeightRequest="24" WidthRequest="24" CornerRadius="32" AbsoluteLayout.LayoutBounds="345,350"/>
-                            </AbsoluteLayout>
-                            <BoxView HeightRequest="0.2" BackgroundColor="#16313B" Margin="30,0,300,0"/>
-                            <Grid RowSpacing="0" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand" ColumnSpacing="0">
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="100"/>
-                                    <ColumnDefinition Width="100"/>
-                                    <ColumnDefinition Width="110"/>
-                                    <ColumnDefinition Width="100"/>
-                                </Grid.ColumnDefinitions>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="*"/>
-                                </Grid.RowDefinitions>
-                                <Label Grid.Column="0" Grid.Row="0" Margin="30,0,0,0" Text="{helpers:Translate PfizerText}" HorizontalTextAlignment="Center" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" TextColor="Black" FontFamily="DMSerifDisplay" />
-                                <Label Grid.Column="1" Grid.Row="0" Text="{helpers:Translate TakedaText}" HorizontalTextAlignment="Center" HorizontalOptions="Start" VerticalOptions="CenterAndExpand" TextColor="{DynamicResource IndutriesTextColor}" FontFamily="DMSerifDisplay" />
-                                <Label Grid.Column="2" Grid.Row="0" Text="{helpers:Translate BscText}" HorizontalTextAlignment="Center"  HorizontalOptions="Start" VerticalOptions="CenterAndExpand" TextColor="{DynamicResource IndutriesTextColor}" FontFamily="DMSerifDisplay" />
-                                <Label Grid.Column="3" Grid.Row="0" Margin="20,0,0,0" Text="{helpers:Translate BSJIText}" HorizontalTextAlignment="Center"  HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" TextColor="{DynamicResource IndutriesTextColor}" FontFamily="DMSerifDisplay" />
+                        <!--#endregion-->
 
-                            </Grid>
-                        </StackLayout>
-                        <StackLayout Margin="0" BackgroundColor="{DynamicResource ColorLastFrame}" HeightRequest="574">
+                        <RelativeLayout>
                             
-                        </StackLayout>
+                            <!--#region Middle Container -->
+                            <StackLayout x:Name="MiddleContainer" Margin="0" BackgroundColor="{DynamicResource ColorSecondFrame}" HeightRequest="900">
+
+                                <!--#region Carousel Buttons -->
+                                <RelativeLayout HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand" Margin="10" Padding="0">
+
+                                    <!--#region Card -->
+                                    <StackLayout Margin="0" Spacing="0" Padding="0" x:Name="CardLayout">
+                                        <Label Text="{helpers:Translate MiddleFrameTitle}" FontFamily="DMSerifDisplay" TextColor="White" FontSize="18" Margin="53,115,110,5"/>
+                                        <BoxView HeightRequest="0.2" BackgroundColor="White" Margin="53,0,270,25"/>
+                                        <Frame x:Name="Card" CornerRadius="17" BackgroundColor="{DynamicResource CardColor}" HeightRequest="520" Margin="50,0,50,30" Padding="0">
+                                            <StackLayout Margin="0" Padding="0">
+                                                <Frame CornerRadius="17" Padding="0" Margin="0">
+                                                    <Image Source="pfizerMotion.png" HorizontalOptions="FillAndExpand" Margin="0" Aspect="AspectFill"/>
+                                                </Frame>
+                                                <Label Text="{helpers:Translate CardTitle}" Margin="30,0,15,5" FontFamily="DMSerifDisplay" FontSize="30" TextColor="Black"/>
+                                                <Label Text="{helpers:Translate CardDescription}" Margin="30,0,17,5" FontSize="10" FontFamily="Rubik"/>
+                                                <Button Text="{helpers:Translate CardButtonText}" Margin="30,0,139,20" HeightRequest="35" TextTransform="None" FontFamily="DMSerifDisplay" FontSize="12" CornerRadius="22" BackgroundColor="{DynamicResource PrimaryButtonColor}" TextColor="{DynamicResource ColorLastFrame}"/>
+                                            </StackLayout>
+                                        </Frame>
+                                    </StackLayout>
+                                    <!--#endregion-->
+
+                                    <Button RelativeLayout.YConstraint="350" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Factor=1}" ImageSource="strokeLeft.png" BackgroundColor="{DynamicResource PrimaryButtonColor}" HeightRequest="24" WidthRequest="24" CornerRadius="32"/>
+                                    <Button RelativeLayout.YConstraint="350" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, ElementName=CardLayout,Property=Width, Factor=0.9}" ImageSource="strokeRight.png" BackgroundColor="{DynamicResource PrimaryButtonColor}" HeightRequest="24" WidthRequest="24" CornerRadius="32"/>
+                                </RelativeLayout>
+                                <!--#endregion-->
+
+                                <BoxView HeightRequest="0.2" BackgroundColor="#16313B" Margin="30,0,300,0"/>
+                                <Grid RowSpacing="0" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand" ColumnSpacing="0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="100"/>
+                                        <ColumnDefinition Width="100"/>
+                                        <ColumnDefinition Width="110"/>
+                                        <ColumnDefinition Width="100"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Label Grid.Column="0" Grid.Row="0" Margin="30,0,0,0" Text="{helpers:Translate PfizerText}" HorizontalTextAlignment="Center" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" TextColor="Black" FontFamily="DMSerifDisplay" />
+                                    <Label Grid.Column="1" Grid.Row="0" Text="{helpers:Translate TakedaText}" HorizontalTextAlignment="Center" HorizontalOptions="Start" VerticalOptions="CenterAndExpand" TextColor="{DynamicResource IndutriesTextColor}" FontFamily="DMSerifDisplay" />
+                                    <Label Grid.Column="2" Grid.Row="0" Text="{helpers:Translate BscText}" HorizontalTextAlignment="Center"  HorizontalOptions="Start" VerticalOptions="CenterAndExpand" TextColor="{DynamicResource IndutriesTextColor}" FontFamily="DMSerifDisplay" />
+                                    <Label Grid.Column="3" Grid.Row="0" Margin="20,0,0,0" Text="{helpers:Translate BSJIText}" HorizontalTextAlignment="Center"  HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" TextColor="{DynamicResource IndutriesTextColor}" FontFamily="DMSerifDisplay" />
+                                </Grid>
+                            </StackLayout>
+                            <!--#endregion-->
+
+                            <!--#region Last Container -->
+                            <StackLayout  RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=MiddleContainer, Property=Height, Factor=1}" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}" RelativeLayout.HeightConstraint="650" Margin="0" BackgroundColor="{DynamicResource ColorLastFrame}">
+                                <Label FontFamily="DMSerifDisplay" HorizontalTextAlignment="Center" Margin="200,90,0,0" Text="{helpers:Translate LastFrameTitle}" HorizontalOptions="End" TextColor="White" FontSize="24"/>
+                                <Button  TextTransform="None" BackgroundColor="{DynamicResource PrimaryButtonColor}" CornerRadius="23" Text="{helpers:Translate MainFrameButton}" Margin="0,43,30,53" HorizontalOptions="EndAndExpand" />
+                                <BoxView HeightRequest="0.2" BackgroundColor="White" Margin="290,0,35,22" />
+                                <Image Source="logo.png" WidthRequest="130" Margin="200,0,0,16" HorizontalOptions="CenterAndExpand"/>
+                                <StackLayout WidthRequest="200" HorizontalOptions="EndAndExpand"  Margin="0,0,36,20">
+                                    <Label HorizontalOptions="EndAndExpand" FontFamily="Rubik" HorizontalTextAlignment="End">
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                                <Span Text="{helpers:Translate BogotaText}" TextColor="White" FontAttributes="Bold"/>
+                                                <Span Text="&#10;Calle 106 # 54-15 of. 307/30&#10;" TextColor="White"/>
+                                                <Span Text="&#10;"/>
+                                                <Span Text="{helpers:Translate HarpendenText}" TextColor="White" FontAttributes="Bold"/>
+                                                <Span Text="&#10;Harpenden Hall, Southdown Rd&#10;" TextColor="White"/>
+                                                <Span Text="&#10;"/>
+                                                <Span Text="{helpers:Translate MiamiText}" TextColor="White" FontAttributes="Bold"/>
+                                                <Span Text="&#10;990 Biscayne Blvd #501" TextColor="White"/>
+                                            </FormattedString>
+                                        </Label.FormattedText>
+                                    </Label>
+                                </StackLayout>
+                                <BoxView HeightRequest="0.2" BackgroundColor="White" Margin="290,0,35,20" />
+                                <Label FontSize="12" TextColor="White" HorizontalOptions="EndAndExpand" Text="Foonkie Monkey 2021" Margin="0,0,36,35"/>
+                            </StackLayout>
+                            <Image Source="FoonkieMonkeyFooter.png" Aspect="AspectFit" RelativeLayout.HeightConstraint="330" RelativeLayout.WidthConstraint="352" RelativeLayout.YConstraint="880" RelativeLayout.XConstraint="-35"/>
+                            <!--#endregion-->
+                        </RelativeLayout>
                     </StackLayout>
                 </ScrollView>
                 <Image Source="FoonkieMonkey.png" HeightRequest="476" WidthRequest="257" AbsoluteLayout.LayoutBounds="70,380" />
