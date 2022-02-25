@@ -115,6 +115,24 @@ namespace FoonkieMonkey.Resx {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a I need you to build an application.
+        /// </summary>
+        internal static string EmailBody {
+            get {
+                return ResourceManager.GetString("EmailBody", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a I want a quote.
+        /// </summary>
+        internal static string EmailSubjet {
+            get {
+                return ResourceManager.GetString("EmailSubjet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Harpenden, UK:.
         /// </summary>
         internal static string HarpendenText {

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FoonkieMonkey.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -13,6 +14,7 @@ namespace FoonkieMonkey
         public MainPage()
         {
             InitializeComponent();
+            BindingContext = new MainViewModel();
         }
     }
 }

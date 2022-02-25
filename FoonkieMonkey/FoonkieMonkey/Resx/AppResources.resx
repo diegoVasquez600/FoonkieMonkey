@@ -135,6 +135,12 @@
   <data name="CardTitle" xml:space="preserve">
     <value>Digital Platform for Pfizer</value>
   </data>
+  <data name="EmailBody" xml:space="preserve">
+    <value>I need you to build an application</value>
+  </data>
+  <data name="EmailSubjet" xml:space="preserve">
+    <value>I want a quote</value>
+  </data>
   <data name="HarpendenText" xml:space="preserve">
     <value>Harpenden, UK:</value>
   </data>
