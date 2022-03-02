@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FoonkieMonkey.Views.UsersView"
+             xmlns:helpers="clr-namespace:FoonkieMonkey.Helpers"
+             xmlns:viewModels="clr-namespace:FoonkieMonkey.ViewModels"
+             BackgroundColor="White">
+    <ContentPage.Content>
+        <ScrollView HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand">
+            <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand">
+                <Label FontSize="Medium" Text="Users" Margin="10" HorizontalOptions="Center" VerticalOptions="StartAndExpand" HorizontalTextAlignment="Center"/>
+                <CollectionView SelectionChangedCommand="{Binding UserSelectedCommand}" SelectedItem="{Binding SelectedUser}" ItemsSource="{Binding UsersCollection}" SelectionMode="Single">
+                    <CollectionView.EmptyView>
+                        <StackLayout>
+                            <Label Text="{helpers:Translate EmpyUsers}" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" HorizontalTextAlignment="Center" FontSize="Large"/>
+                        </StackLayout>
+                    </CollectionView.EmptyView>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" Padding="10,0,10,0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="40"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <StackLayout Margin="0" Padding="10" Grid.Column="1">
+                                    <Label HorizontalOptions="StartAndExpand" TextColor="Black">
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                                <Span Text="{Binding First_Name}" FontSize="15"/>
+                                                <Span Text=" " FontSize="15"/>
+                                                <Span Text="{Binding Last_Name}" FontSize="15"/>
+                                            </FormattedString>
+                                        </Label.FormattedText>
+                                    </Label>
+                                    <Label Text="{Binding Email}" FontSize="12" HorizontalOptions="StartAndExpand"/>
+                                </StackLayout>
+                                <Image Source="{Binding Avatar}" Grid.Column="0"/>
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

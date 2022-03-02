@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FoonkieMonkey.Helpers.LocalStorange;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,6 +11,8 @@ namespace FoonkieMonkey
 
     public partial class App : Application
     {
+        public static int TotalUsers { get; set; }
+        private static Foonkie _localStorange { get; set; }
         public App()
         {
             InitializeComponent();

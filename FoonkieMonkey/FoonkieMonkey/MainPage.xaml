@@ -105,7 +105,7 @@
                     </StackLayout>
                 </ScrollView>
                 <Image Source="FoonkieMonkey.png" HeightRequest="476" WidthRequest="257" AbsoluteLayout.LayoutBounds="70,380" />
-                <Button ImageSource="vector.png" HeightRequest="61" WidthRequest="61" CornerRadius="48" Grid.Row="0" BackgroundColor="{DynamicResource PrimaryButtonColor}" AbsoluteLayout.LayoutBounds="300,670"/>
+                <Button Command="{Binding GetUsersCommand}" ImageSource="vector.png" HeightRequest="61" WidthRequest="61" CornerRadius="48" Grid.Row="0" BackgroundColor="{DynamicResource PrimaryButtonColor}" AbsoluteLayout.LayoutBounds="300,670"/>
             </AbsoluteLayout>
         </Grid>
     </ScrollView>

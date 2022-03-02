@@ -141,6 +141,9 @@
   <data name="EmailSubjet" xml:space="preserve">
     <value>I want a quote</value>
   </data>
+  <data name="EmpyUsers" xml:space="preserve">
+    <value>We Don't Find Users or you're not conectec to the internet, Please Try Again Later</value>
+  </data>
   <data name="HarpendenText" xml:space="preserve">
     <value>Harpenden, UK:</value>
   </data>
